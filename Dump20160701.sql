@@ -1,4 +1,4 @@
-﻿-- MySQL dump 10.13  Distrib 5.7.9, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.9, for Win64 (x86_64)
 --
 -- Host: localhost    Database: adweb
 -- ------------------------------------------------------
@@ -27,7 +27,7 @@ CREATE TABLE `collection` (
   `user_id` varchar(30) NOT NULL,
   `sight_name` varchar(50) NOT NULL,
   PRIMARY KEY (`collection_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,7 +36,7 @@ CREATE TABLE `collection` (
 
 LOCK TABLES `collection` WRITE;
 /*!40000 ALTER TABLE `collection` DISABLE KEYS */;
-INSERT INTO `collection` VALUES (2,'AAA','上海东方明珠'),(7,'admin','1933老场坊'),(9,'admin','新天地上海'),(10,'admin','上海东方明珠'),(11,'admin','上海科技馆'),(12,'admin','五角场万达广场'),(13,'AAA','新天地上海'),(14,'BBB','五角场万达广场'),(15,'admin','上海复兴公园');
+INSERT INTO `collection` VALUES (2,'AAA','上海东方明珠'),(7,'admin','1933老场坊'),(10,'admin','上海东方明珠'),(11,'admin','上海科技馆'),(12,'admin','五角场万达广场'),(13,'AAA','新天地上海'),(14,'BBB','五角场万达广场'),(15,'admin','上海复兴公园'),(16,'admin','新天地上海');
 /*!40000 ALTER TABLE `collection` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -79,7 +79,7 @@ CREATE TABLE `history` (
   `user_id` varchar(30) NOT NULL,
   `history_content` tinytext NOT NULL,
   PRIMARY KEY (`history_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -88,7 +88,7 @@ CREATE TABLE `history` (
 
 LOCK TABLES `history` WRITE;
 /*!40000 ALTER TABLE `history` DISABLE KEYS */;
-INSERT INTO `history` VALUES (3,'admin','科技'),(6,'admin','1933'),(8,'admin','上海'),(9,'admin','query'),(10,'admin','上海科技馆'),(11,'admin','新天地');
+INSERT INTO `history` VALUES (3,'admin','科技'),(6,'admin','1933'),(8,'admin','上海'),(9,'admin','query'),(10,'admin','上海科技馆'),(11,'admin','新天地'),(12,'admin','上');
 /*!40000 ALTER TABLE `history` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -139,7 +139,6 @@ CREATE TABLE `resource` (
 
 LOCK TABLES `resource` WRITE;
 /*!40000 ALTER TABLE `resource` DISABLE KEYS */;
-INSERT INTO `resource` VALUES ('file_1467300396797Ijpg','上海复兴公园',0),('file_1467300512116Ipng','新天地上海',0);
 /*!40000 ALTER TABLE `resource` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -234,7 +233,7 @@ CREATE TABLE `step` (
   `user_id` varchar(30) NOT NULL,
   `sight_name` varchar(50) NOT NULL,
   PRIMARY KEY (`step_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -243,7 +242,7 @@ CREATE TABLE `step` (
 
 LOCK TABLES `step` WRITE;
 /*!40000 ALTER TABLE `step` DISABLE KEYS */;
-INSERT INTO `step` VALUES (2,'AAA','1933老场坊'),(11,'admin','1933老场坊'),(13,'admin','上海复兴公园'),(15,'admin','上海东方明珠'),(16,'admin','五角场万达广场'),(17,'AAA','新天地上海'),(19,'BBB','新天地上海'),(21,'admin','新天地上海');
+INSERT INTO `step` VALUES (2,'AAA','1933老场坊'),(11,'admin','1933老场坊'),(13,'admin','上海复兴公园'),(15,'admin','上海东方明珠'),(16,'admin','五角场万达广场'),(17,'AAA','新天地上海'),(19,'BBB','新天地上海'),(22,'admin','新天地上海');
 /*!40000 ALTER TABLE `step` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -269,7 +268,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES ('AAA','管理员','aaa','img/user_defaultIpng'),('admin','伟大的管理员','123456','img/user_defaultIpng'),('BBB','BBB','bbb','img/user_defaultIpng'),('CCC','CCC','ccc','img/user_defaultIpng');
+INSERT INTO `user` VALUES ('AAA','管理员2','aaa','img/user_defaultIpng'),('admin','伟大的管理员','123456','img/user_defaultIpng'),('BBB','BBB','bbb','img/user_defaultIpng'),('CCC','CCC','ccc','img/user_defaultIpng'),('ddd','ddd','ddd','img/user_defaultIpng');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -289,7 +288,7 @@ CREATE TABLE `value` (
   `value_description` text NOT NULL,
   `value_content` text,
   PRIMARY KEY (`value_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -298,7 +297,7 @@ CREATE TABLE `value` (
 
 LOCK TABLES `value` WRITE;
 /*!40000 ALTER TABLE `value` DISABLE KEYS */;
-INSERT INTO `value` VALUES (2,'五角场万达广场','31.301297','121.51362',1,'4','nothing here'),(3,'五角场万达广场','31.301297','121.51372',2,'5','nothing here'),(5,'五角场万达广场','31.301297','121.51392',3,'6','一个建议'),(6,'五角场万达广场','31.29981','121.513384',3,'2','nothing here'),(7,'五角场万达广场','31.301561','121.513652',1,'5','nothing here'),(8,'五角场万达广场','31.302029','121.512746',3,'1','nothing here'),(9,'五角场万达广场','31.300177','121.514269',3,'5','垃圾桶'),(10,'五角场万达广场','31.302123','121.513802',3,'5','电玩'),(11,'上海复兴公园','31.217782','121.469514',1,'1','nothing here'),(12,'上海复兴公园','31.216002','121.46769',2,'7','nothing here'),(13,'上海复兴公园','31.217158','121.467497',2,'4','nothing here'),(14,'上海复兴公园','31.216387','121.468549',1,'2','nothing here'),(15,'上海东方明珠','31.240133','121.499852',1,'3','nothing here'),(16,'上海东方明珠','31.239711','121.500506',3,'5','卖店'),(17,'上海科技馆','31.218674','121.542406',3,'5','卖店'),(18,'上海复兴公园','31.215837','121.46975',1,'4','nothing here');
+INSERT INTO `value` VALUES (2,'五角场万达广场','31.301297','121.51362',1,'4','nothing here'),(3,'五角场万达广场','31.301297','121.51372',2,'5','nothing here'),(5,'五角场万达广场','31.301297','121.51392',3,'6','一个建议'),(6,'五角场万达广场','31.29981','121.513384',3,'2','nothing here'),(7,'五角场万达广场','31.301561','121.513652',1,'5','nothing here'),(8,'五角场万达广场','31.302029','121.512746',3,'1','nothing here'),(9,'五角场万达广场','31.300177','121.514269',3,'5','垃圾桶'),(10,'五角场万达广场','31.302123','121.513802',3,'5','电玩'),(11,'上海复兴公园','31.217782','121.469514',1,'1','nothing here'),(12,'上海复兴公园','31.216002','121.46769',2,'7','nothing here'),(13,'上海复兴公园','31.217158','121.467497',2,'4','nothing here'),(14,'上海复兴公园','31.216387','121.468549',1,'2','nothing here'),(15,'上海东方明珠','31.240133','121.499852',1,'3','nothing here'),(16,'上海东方明珠','31.239711','121.500506',3,'5','卖店'),(17,'上海科技馆','31.218674','121.542406',3,'5','卖店'),(18,'上海复兴公园','31.215837','121.46975',1,'4','nothing here'),(19,'上海复兴公园','31.216919','121.469707',2,'3','nothing here'),(20,'上海复兴公园','31.217158','121.469664',3,'5','厕所');
 /*!40000 ALTER TABLE `value` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -314,7 +313,7 @@ CREATE TABLE `wish` (
   `user_id` varchar(30) NOT NULL,
   `sight_name` varchar(50) NOT NULL,
   PRIMARY KEY (`wish_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -323,7 +322,7 @@ CREATE TABLE `wish` (
 
 LOCK TABLES `wish` WRITE;
 /*!40000 ALTER TABLE `wish` DISABLE KEYS */;
-INSERT INTO `wish` VALUES (2,'AAA','上海东方明珠'),(4,'admin','1933老场坊'),(5,'admin','新天地上海'),(6,'admin','上海科技馆'),(7,'BBB','五角场万达广场');
+INSERT INTO `wish` VALUES (2,'AAA','上海东方明珠'),(4,'admin','1933老场坊'),(6,'admin','上海科技馆'),(7,'BBB','五角场万达广场'),(8,'admin','新天地上海');
 /*!40000 ALTER TABLE `wish` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -336,4 +335,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-06-30 23:29:52
+-- Dump completed on 2016-07-01  0:12:03
